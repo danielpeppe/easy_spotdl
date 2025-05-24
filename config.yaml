@@ -1,0 +1,6 @@
+# Configuration for SpotDL Downloader
+audio_source: youtube-music       # Options: youtube, youtube-music, etc.
+file_format: flac                 # Options: mp3, flac, ogg, opus, wav, m4a
+input_file: spotify_links.txt      # Path to .txt file with Spotify links (one per line)
+output_directory: ./downloads      # Directory where downloaded files will be saved
+debug: true                       # If true, prints subprocess output line-by-line
