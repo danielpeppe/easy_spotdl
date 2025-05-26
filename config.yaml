@@ -1,6 +1,22 @@
 # Configuration for SpotDL Downloader
-audio_source: youtube-music       # Options: youtube, youtube-music, etc.
-file_format: flac                 # Options: mp3, flac, ogg, opus, wav, m4a
-input_file: spotify_links.txt      # Path to .txt file with Spotify links (one per line)
-output_directory: ./downloads      # Directory where downloaded files will be saved
-debug: true                       # If true, prints subprocess output line-by-line
+spotdl_config:
+  audio_source: youtube-music       # Options: youtube, youtube-music, etc.
+  file_format: flac                 # Options: mp3, flac, ogg, opus, wav, m4a
+  input_file: spotify_links.txt      # Path to .txt file with Spotify links (one per line)
+  output_directory: ./downloads      # Directory where downloaded files will be saved
+  debug: true                       # If true, prints subprocess output line-by-line
+
+# Extract stems
+extract_stems_config:
+  input_files_directory: ./downloads  # Directory containing files to extract stems from
+  output_directory: ./extracted_stems  # Directory to save extracted stems
+  stem_types: [vocals, drums, bass, piano]  # Types of stems to extract
+  
+
+# File conversion
+convert_files_config:
+  from_ext: vdjsample 
+  to_ext: flac
+  is_vdjsample_file: false # If true, assumes files are in ogg format
+  input_files_directory: ./files_to_convert  # Directory containing files to convert
+  output_directory: ./converted_files  # Directory to save converted files
