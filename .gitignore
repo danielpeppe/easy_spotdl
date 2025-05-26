@@ -1,4 +1,12 @@
 .venv/
 __pycache__/
-downloads/
-spotify_link.txt
+
+# Audio
+*.wav
+*.ogg
+*.aiff
+*.mp3
+*.m4a
+*.flac
+*.vdjstems
+*.vdjsample
